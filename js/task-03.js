@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const listGallery = document.querySelector('.gallery');
+
+const murkupItem = images.map(img =>
+  `<li><img src=${img.url} alt=${img.alt} width=420></li>`
+).join(' ');
+
+listGallery.insertAdjacentHTML('afterbegin', murkupItem)
